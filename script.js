@@ -45,10 +45,10 @@
     const text = valueToggle ? `\n    <text x="${Math.round((size/2) - (textSize.width/1.75))}px" y="${Math.round((size/2) + (textSize.height/3.25))}px" fill="${textColor}" font-size="${textSize.fontSize}px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -${size - 4}px)">${progress}${suffix}</text>` : ''
 
     return `
-<svg width="${size}" height="${size}" viewBox="-${size*0.125} -${size*0.125} ${size*1.25} ${size*1.25}" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-  <circle r="${(size/2) - 10}" cx="${size/2}" cy="${size/2}" fill="transparent" stroke="${circleColor}" stroke-width="${circleWidth}" stroke-dasharray="${circumference}" stroke-dashoffset="0"></circle>
-  <circle r="${(size/2) - 10}" cx="${size/2}" cy="${size/2}" stroke="${progressColor}" stroke-width="${progressWidth}" stroke-linecap="${progressShape}" stroke-dashoffset="${percentage}" fill="transparent" stroke-dasharray="${circumference}"></circle>${text}
-</svg>
+  <svg width="${size}" height="${size}" viewBox="-${size*0.125} -${size*0.125} ${size*1.25} ${size*1.25}" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+    <circle r="${(size/2) - 10}" cx="${size/2}" cy="${size/2}" fill="transparent" stroke="${circleColor}" stroke-width="${circleWidth}" stroke-dasharray="${circumference}" stroke-dashoffset="0"></circle>
+    <circle r="${(size/2) - 10}" cx="${size/2}" cy="${size/2}" stroke="${progressColor}" stroke-width="${progressWidth}" stroke-linecap="${progressShape}" stroke-dashoffset="${percentage}" fill="transparent" stroke-dasharray="${circumference}"></circle>${text}
+  </svg>
     `
   }
 
