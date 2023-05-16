@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+label {
+  cursor: pointer;
+}
+
+main, header {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  max-width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+main {
+  margin-bottom: 25px;
+}
+
+h1 {
+  margin: 30px 0 40px;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+.column {
+  width: 48%;
+}
+
+@media screen and (max-width: 670px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.field-group {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px;
+}
+
+.field-group--optional {
+  display: block;
+}
+
+.field-group label {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+#value-toggle:not(:checked) ~ .field-group {
+  display: none;
+}
+
+.output-code {
+  margin: 15px 0;
+  min-height: 100px;
+  background: #f7f7f7;
+  color: #222;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.field-group input[type="number"] {
+  border: 1px solid #888;
+  border-radius: 3px;
+  padding: 3px 7px;
+}
+
+.field-group input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+  height: 30px;
+  width: 28px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.field-group input[type="radio"] {
+  margin: 0;
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 40px;
+}
+
+.footer-text {
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: .8em;
+}
+
+.copy-btn {
+  width: 156px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  margin: 0;
+  padding: 12px 26px;
+  color: #fff;
+  background-color: #377cf0;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background-color: #1951b0;
+}

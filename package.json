@@ -1,0 +1,23 @@
+{
+  "name": "svg-circle-progress-generator",
+  "version": "1.0.0",
+  "repository": "git@github.com:nikitahl/svg-circle-progress-generator.git",
+  "author": "Nikita Hlopov<nikita.h@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url ./",
+    "deploy": "gh-pages -d dist"
+  },
+  "targets": {
+    "default": {
+      "publicUrl": "/svg-circle-progress-generator"
+    }
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
