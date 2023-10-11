@@ -12,4 +12,4 @@ This project is open for contributions. Read the [contributing guide](./CONTRIBU
 
 ## License
 
-Disavow link manager is [MIT licensed](./LICENSE).
+SVG circle progress generator is [MIT licensed](./LICENSE).
