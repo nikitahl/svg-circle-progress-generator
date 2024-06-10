@@ -53,12 +53,14 @@
   }
 
   function setTextSize () {
-    const svgText = document.querySelector('text')
-    const textRect = svgText.getBoundingClientRect()
-    svgAttributes.textSize = {
-      width: Math.round(textRect.width),
-      height: Math.round(textRect.height),
-      fontSize: svgAttributes.textSize.fontSize
+    if (svgAttributes.valueToggle) {
+      const svgText = document.querySelector('text')
+      const textRect = svgText.getBoundingClientRect()
+      svgAttributes.textSize = {
+        width: Math.round(textRect.width),
+        height: Math.round(textRect.height),
+        fontSize: svgAttributes.textSize.fontSize
+      } 
     }
   }
 
