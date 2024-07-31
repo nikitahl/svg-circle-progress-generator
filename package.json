@@ -2,7 +2,7 @@
   "name": "svg-circle-progress-generator",
   "version": "1.0.0",
   "repository": "git@github.com:nikitahl/svg-circle-progress-generator.git",
-  "author": "Nikita Hlopov<nikita.h@gmail.com>",
+  "author": "Nikita Hlopov",
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
