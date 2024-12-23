@@ -46,7 +46,7 @@
 
     return `
   <svg width="${size}" height="${size}" viewBox="-${size*0.125} -${size*0.125} ${size*1.25} ${size*1.25}" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-    <circle r="${(size/2) - 10}" cx="${size/2}" cy="${size/2}" fill="transparent" stroke="${circleColor}" stroke-width="${circleWidth}" stroke-dasharray="${circumference}" stroke-dashoffset="0"></circle>
+    <circle r="${(size/2) - 10}" cx="${size/2}" cy="${size/2}" fill="transparent" stroke="${circleColor}" stroke-width="${circleWidth}"></circle>
     <circle r="${(size/2) - 10}" cx="${size/2}" cy="${size/2}" stroke="${progressColor}" stroke-width="${progressWidth}" stroke-linecap="${progressShape}" stroke-dashoffset="${percentage}" fill="transparent" stroke-dasharray="${circumference}"></circle>${text}
   </svg>
     `
@@ -81,7 +81,11 @@
     } else if (e.target.name === "size") {
       const radius = (e.target.valueAsNumber/2) - 10
       const circumference = 3.14*radius*2
-      svgAttributes.circumference = circumference + "px"
+      let artifactCorrection = 0
+      if (svgAttributes.progress === '100') {
+        artifactCorrection = 1 // avoid a tiny gap on zoomed SVG
+      }
+      svgAttributes.circumference = circumference + artifactCorrection + "px"
       svgAttributes.percentage = Math.round(circumference*((100-svgAttributes.progress)/100)) + "px"
     } else if (e.target.type === "checkbox") {
       value = e.target.checked
