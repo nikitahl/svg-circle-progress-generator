@@ -118,3 +118,24 @@ h1 {
 .copy-btn:hover {
   background-color: #1951b0;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: #eee;
+  }
+
+  a {
+    color: #8dcbfa;
+  }
+
+  input,
+  .output-code {
+    background: #555;
+    color: #fff;
+  }
+
+  input[type=range] {
+    accent-color: #8dcbfa;
+  }
+}
